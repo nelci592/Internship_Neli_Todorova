@@ -26,8 +26,11 @@ var JSON_knoppen = {
             /*{name: 'ZKL-RC',image: 'Iconen/Buttons/ZKL.svg', style: 'width:25px; height:25px; background-color: #8A76AF; border-radius: 50%;', color: 'background-color: white; color: #000 text-align: center;', color2: '#0db02b', color3:'#000', link: '1-8', sub: null},
             */{name: 'Kilometrering',image: 'Iconen/Buttons/Kilometer.svg', style: 'width:25px; height:25px; background-color: #8A76AF; border-radius: 50%;', color: 'background-color: white; color: #000 text-align: center;', color2: '#0db02b', color3:'#000', link: '1-9', sub: null},
             {name: 'Luchtfoto',image: 'Iconen/Buttons/Luchtfoto.svg', style: 'width:25px; height:25px; background-color: #8A76AF; border-radius: 50%;', color: 'background-color: white; color: #000 text-align: center;', color2: '#0db02b', color3:'#000', link: '1-10', sub: null},
+            {name: 'Profile',image: 'Iconen/Buttons/user.svg', style: 'width:25px; height:25px; border-radius: 50%;', color: 'background-color: white; color: #000 text-align: center;', color2: '#0db02b', color3:'#000', link: '1-10', sub: null},
+
             {name: 'Toon alles', image: 'display: none;', image2: 'display: none;', style: 'display: none;', color: 'background-color: #ff660e; color: white; text-align: center;', link: '1-11', sub: null}
         ]} ,
+
          {name: 'Jaarplan 2020', image: 'display: none;', style: 'display: none;', color: 'background-color: #0db02b; color: white; text-align: center;', link: '2020', sub: [
             {name: 'Home',image: 'Iconen/Home.svg', image2: 'Iconen/Home.svg', style: 'width:25px; height:25px; background-color: #ff660e; border-radius: 50%;', color: 'background-color: #ff660e; color: white; text-align: center; border-radius: 4px;', color2: '#ff660e', color3:'#ff660e', link: '1-0', sub: null},
             {name: 'Edit',image: 'Iconen/Buttons/Edit.svg', style: 'width:25px; height:25px; background-color: #ff660e; border-radius: 50%;', color: 'background-color: white; color: #000 text-align: center;', color2: '#ff660e', color3:'#000', link: '1-1', sub: null},
@@ -40,7 +43,8 @@ var JSON_knoppen = {
             /*{name: 'ZKL-RC',image: 'Iconen/Buttons/ZKL.svg', style: 'width:25px; height:25px; background-color: #8A76AF; border-radius: 50%;', color: 'background-color: white; color: #000 text-align: center;', color2: '#0db02b', color3:'#000', link: '1-8', sub: null},
             */{name: 'Kilometrering',image: 'Iconen/Buttons/Kilometer.svg', style: 'width:25px; height:25px; background-color: #8A76AF; border-radius: 50%;', color: 'background-color: white; color: #000 text-align: center;', color2: '#0db02b', color3:'#000', link: '1-9', sub: null},
             {name: 'Luchtfoto',image: 'Iconen/Buttons/Luchtfoto.svg', style: 'width:25px; height:25px; background-color: #8A76AF; border-radius: 50%;', color: 'background-color: white; color: #000 text-align: center;', color2: '#0db02b', color3:'#000', link: '1-10', sub: null},
+            {name: 'Profile',image: 'Iconen/Buttons/user.svg', style: 'width:25px; height:25px; background-color: #8A76AF; border-radius: 50%;', color: 'background-color: white; color: #000 text-align: center;', color2: '#0db02b', color3:'#000', link: '1-10', sub: null},
             {name: 'Toon alles', image: 'display: none;', image2: 'display: none;', style: 'display: none;', color: 'background-color: #ff660e; color: white; text-align: center;', link: '1-11', sub: null}
-        ]}        
+        ]}
     ]
 }

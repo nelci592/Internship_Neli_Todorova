@@ -1,3 +1,5 @@
+
+
     jQuery(function ($) {
         'use strict';
 
@@ -5,11 +7,11 @@
         function parseiconenmenu(ul, menu) {
             for (var i = 0; i < menu.length; i++) {
 
- 
+
                 if (menu[i].link == cluster) {
                     categorie_naam = menu[i].name;
-                    
-  
+
+
                     for (var j = 0; j < menu[i].sub.length - 1; j++) {
 
                         var subcategorietekst = categorie + "-" + subcategorie;
@@ -188,6 +190,16 @@
 
                                 /*loadGeometry(  jsonData , icoon_naam , icoon_url, icoon_kleur);*/
                             }
+                            else if ($(this).attr('title') == "Profile") {
+                              $(this).toggleClass("selected");
+
+                              $(this).css("background-color", menukleur3);
+
+
+
+                              window.location.href =  '../redirect.php';
+                              /*loadGeometry(  jsonData , icoon_naam , icoon_url, icoon_kleur);*/
+                          }
                         }
                     });
                 }
@@ -203,7 +215,7 @@
                     dataType: 'json',
                     success: function (data) {
                         jsonData=data;
-                        
+
                     },
             error: function (data) {
                 alert("error!");

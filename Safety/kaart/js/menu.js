@@ -2,6 +2,8 @@ $(function () {
 
     function parseMenu(ul, menu) {
         for (var i = 0; i < menu.length; i++) {
+
+
             var li = $(ul).append('<li><a href="#" onclick="openmenu(\'' + menu[i].link + '\');" style="' + menu[i].color + '"> <img src="' + menu[i].image + '" align="left" style="' + menu[i].style + '"> &nbsp;' + menu[i].name + '</a></li>');
 
             if (menu[i].sub != null) {
@@ -17,7 +19,9 @@ $(function () {
 });
 
 function openmenu(menunummer) {
-
+  if (menunummer == '2020') {
+    var url = "auth.php"
+  } else
    var url = "kaart/index.html?jaarplan=" + menunummer;
    window.location.replace(url);
 
