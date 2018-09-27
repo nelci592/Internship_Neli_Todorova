@@ -56,7 +56,7 @@
 						</li>
 
             <li>
-							<a href="register.php">
+							<a href="changeOrDelUser.php">
 							<i class="glyphicon glyphicon-user"></i>
 							Change user's level(s) </a>
 						</li>

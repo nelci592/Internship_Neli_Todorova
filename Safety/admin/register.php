@@ -6,7 +6,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="addtask.css">
 
-<form action="signup.php" form class="form-style-9" method="POST">
+<form action="registerDB.php" form class="form-style-9" method="POST">
 <div class="container register">
                 <div class="row">
                     <div class="col-md-3 register-left">
@@ -41,31 +41,31 @@
 
                                         <div class="form-group">
                                           <div class="input-group">
-                                      			<label>User type</label>
-                                      			<select name="rolename" id="rolename" >
-                                      				<option value=""></option>
-                                      				<option value="Admin">Admin</option>
-                                      				<option value="user">User</option>
-                                      			</select>
+		                                          <select name="rolename" id="rolename" class="form-control">
+                                                <option class="hidden"  selected disabled>Select user level</option>
+	                                              </select>
                                       		</div>
                                         </div>
 
                                         <div class="form-group">
-                                            <select class="form-control">
+                                          <div class="input-group">
+
+                                            <select name="rolename2" id="rolename2" class="form-control">
                                                 <option class="hidden"  selected disabled>Select user level 2</option>
-                                                <option>What is your Birthdate?</option>
-                                                <option>What is Your old Phone Number</option>
-                                                <option>What is your Pet Name?</option>
+                                              <option value="NULL">NULL</option>
+
                                             </select>
+                                          </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <select class="form-control">
+                                          <div class="input-group">
+
+                                            <select name="rolename3" id="rolename3" class="form-control">
                                                 <option class="hidden"  selected disabled>Select user level 3</option>
-                                                <option>What is your Birthdate?</option>
-                                                <option>What is Your old Phone Number</option>
-                                                <option>What is your Pet Name?</option>
+                                                <option value="NULL">NULL</option>
                                             </select>
+                                          </div>
                                         </div>
 
 
@@ -80,3 +80,69 @@
                 </div>
 
             </div>
+
+            <?php
+            include('../dbh.php');
+            $sql = "SELECT rolename FROM roles;";
+            $result = mysqli_query($conn,$sql);
+
+            if (!$result) {
+                echo "DB Error, could not list tables\n";
+                echo 'MySQL Error: ' . mysqli_error();
+                exit;
+            }
+
+            while ($row = mysqli_fetch_row($result)) {
+                echo "<script>
+                var z = document.createElement('option');
+                z.setAttribute('value', '".$row[0]."');
+                var t = document.createTextNode('".$row[0]."');
+                z.appendChild(t);
+                document.getElementById('rolename').appendChild(z);</script>";
+
+            } ?>
+
+
+            <?php
+            include('../dbh.php');
+            $sql = "SELECT rolename FROM roles WHERE rolename<>'Admin';";
+            $result = mysqli_query($conn,$sql);
+
+            if (!$result) {
+                echo "DB Error, could not list tables\n";
+                echo 'MySQL Error: ' . mysqli_error();
+                exit;
+            }
+
+            while ($row = mysqli_fetch_row($result)) {
+                echo "<script>
+                var z = document.createElement('option');
+                z.setAttribute('value', '".$row[0]."');
+                var t = document.createTextNode('".$row[0]."');
+                z.appendChild(t);
+                document.getElementById('rolename2').appendChild(z);</script>";
+
+            } ?>
+
+
+            <?php
+            include('../dbh.php');
+            $sql = "SELECT rolename FROM roles WHERE rolename<>'Admin';";
+            $result = mysqli_query($conn,$sql);
+
+            if (!$result) {
+                echo "DB Error, could not list tables\n";
+                echo 'MySQL Error: ' . mysqli_error();
+                exit;
+            }
+
+
+            while ($row = mysqli_fetch_row($result)) {
+                echo "<script>
+                var z = document.createElement('option');
+                z.setAttribute('value', '".$row[0]."');
+                var t = document.createTextNode('".$row[0]."');
+                z.appendChild(t);
+                document.getElementById('rolename3').appendChild(z);</script>";
+
+            } ?>
