@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Admin</title>
+<title>Profile</title>
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
@@ -58,42 +58,24 @@
             <li>
 							<a href="changeOrDelUser.php">
 							<i class="glyphicon glyphicon-user"></i>
-							Change user's level(s) </a>
+							Change / Delete user </a>
 						</li>
 
-            <li>
-              <a href="register.php">
-              <i class="glyphicon glyphicon-user"></i>
-              Delete user </a>
-            </li>
+
 
 						<li>
-							<a href="addtask.php" target="_blank">
+							<a href="addOrReassignTask.php" target="_blank">
 							<i class="glyphicon glyphicon-ok"></i>
-							Add new task </a>
+							Add / Reassign task </a>
 						</li>
 
 
-              <li>
-                <a href="addtask.php" target="_blank">
-                <i class="glyphicon glyphicon-ok"></i>
-                Reassign task to (next) level </a>
-              </li>
-
 
               <li>
-                <a href="addnewfunction.php" target="_blank">
+                <a href="addOrReassignFunction.php" target="_blank">
                 <i class="glyphicon glyphicon-ok"></i>
-                Add new function </a>
+                Add / Reassign function </a>
               </li>
-
-
-
-                <li>
-                  <a href="addtask.php" target="_blank">
-                  <i class="glyphicon glyphicon-ok"></i>
-                  Reassign function to level </a>
-                </li>
 
 
 

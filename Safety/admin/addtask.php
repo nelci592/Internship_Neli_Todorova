@@ -9,6 +9,9 @@ $username = $_SESSION['username'];
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="addtask.css">
 
+
+<form action="addtaskDB.php" form class="form-style-9" method="POST">
+
 <div class="container register">
                 <div class="row">
                     <div class="col-md-3 register-left">
@@ -20,10 +23,11 @@ $username = $_SESSION['username'];
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                                 <h3 class="register-heading">Assign/add/send (new) task</h3>
+
                                 <div class="row register-form">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Task Name *" value="" />
+                                            <input type="text" class="form-control"  name= "task_descr" placeholder="Task Name *" value="" />
                                         </div>
 
 
@@ -31,7 +35,7 @@ $username = $_SESSION['username'];
                                     <div class="col-md-6">
                                         <div class="form-group">
                                           <div class="form-group">
-                                              <select class="form-control">
+                                              <select class="form-control" name="rolename">
                                                   <option class="hidden"  selected disabled>Select level of task</option>
                                                   <option>Level 1</option>
                                                   <option>Level 2</option>
@@ -42,7 +46,7 @@ $username = $_SESSION['username'];
 
 
                                         <div class="form-group">
-                                            <select class="form-control">
+                                            <select  class="form-control" name ="username ">
                                                 <option class="hidden"  selected disabled>Select responsible person</option>
                                                 <option>Johan</option>
                                                 <option>Robert</option>
@@ -50,11 +54,11 @@ $username = $_SESSION['username'];
                                             </select>
                                         </div>
 
-                                        <input type="submit" class="btnRegister"  value="Register"/>
+                                        <input type="submit" class="btnRegister" name="addtask"  value="Register"/>
                                     </div>
                                 </div>
 
-                                
+
                             </div>
 
                         </div>
@@ -62,3 +66,4 @@ $username = $_SESSION['username'];
                 </div>
 
             </div>
+</form>
