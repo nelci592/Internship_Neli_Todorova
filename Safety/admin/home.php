@@ -80,7 +80,7 @@
 
 
               <li>
-  							<a href="addtask.php" target="_blank">
+  							<a href="addlevel.php" target="_blank">
   							<i class="glyphicon glyphicon-ok"></i>
   							Add new level </a>
   						</li>

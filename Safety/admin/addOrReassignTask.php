@@ -1,13 +1,13 @@
 <?php session_start(); ?>
 <?php include('../template.php'); ?>
-<title>Change function/ Add function</title>
+<title>Change Task/ Add Task</title>
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="addtask.css">
 
-<form action="addOrReassignFunctionDB.php" form class="form-style-9" method="POST">
+<form action="addOrReassignTaskDB.php" form class="form-style-9" method="POST">
 
 <div class="container register">
                 <div class="row">
@@ -25,7 +25,7 @@
                         </ul>
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <h3 class="register-heading">Change function's level</h3>
+                                <h3 class="register-heading">Change Task's level</h3>
                                 <div class="row register-form">
 
                                     <div class="col-md-6">
@@ -33,7 +33,7 @@
                                         <div class="input-group">
 
                                             <select name="username" id="users" class="form-control">
-                                              <option class="hidden"  selected disabled>Select function</option>
+                                              <option class="hidden"  selected disabled>Select Task</option>
                                               </select>
                                               <?php
                                                 $option = $_POST['username'];
@@ -67,10 +67,10 @@
 
 
                             <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                              <form action="addOrReassignFunctionDB.php" form class="form-style-9" method="POST">
+                              <form action="addOrReassignTaskDB.php" form class="form-style-9" method="POST">
 
 
-                                <h3  class="register-heading">Add function</h3>
+                                <h3  class="register-heading">Add Task</h3>
 
                                 <div class="row register-form">
 
@@ -79,7 +79,7 @@
                                         <div class="input-group">
 
                                           <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Function" value="" />
+                                            <input type="text" class="form-control" placeholder="Task" value="" />
 
                                           </div>
 
@@ -88,7 +88,7 @@
                                         <div class="input-group">
 
                                           <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Function description" value="" />
+                                            <input type="text" class="form-control" placeholder="Task description" value="" />
 
                                           </div>
 
@@ -104,7 +104,7 @@
                                       <div class="form-group">
                                         <div class="input-group">
                                             <select name="rolename" id="rolename" class="form-control">
-                                              <option class="hidden"  selected disabled>Select function level</option>
+                                              <option class="hidden"  selected disabled>Select Task level</option>
                                               </select>
                                         </div>
 
@@ -113,7 +113,7 @@
 
 
 
-                                        <input type="submit" class="btnRegister" name="delete"  value="Add function"/>
+                                        <input type="submit" class="btnRegister" name="delete"  value="Add Task"/>
                                     </div>
                                 </div>
                             </div>
