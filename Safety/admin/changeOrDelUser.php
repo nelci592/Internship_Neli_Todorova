@@ -34,10 +34,17 @@
 
                                             <select name="username" id="users" class="form-control">
                                               <option class="hidden"  selected disabled>Select user</option>
-                                              </select>
                                               <?php
-                                                $option = $_POST['username'];
+                                              require "../dbh.php";// connection to database
+                                              $sql="SELECT username FROM user "; // Query to collect data
+
+                                              foreach ($conn->query($sql) as $row) {
+                                              echo "<option value=$row[username]>$row[username]</option>";
+                                              }
                                               ?>
+
+                                              </select>
+
 
                                         </div>
                                       </div>
@@ -50,6 +57,15 @@
                                         <div class="input-group">
                                             <select name="rolename" id="rolename" class="form-control">
                                               <option class="hidden"  selected disabled>Select user level</option>
+                                              <?php
+                                              require "../dbh.php";// connection to database
+                                              $sql="SELECT rolename FROM roles "; // Query to collect data
+
+                                              foreach ($conn->query($sql) as $row) {
+                                              echo "<option value=$row[rolename]>$row[rolename]</option>";
+                                              }
+                                              ?>
+
                                               </select>
                                         </div>
 
@@ -59,6 +75,15 @@
                                         <div class="input-group">
                                             <select name="rolename2" id="rolename2" class="form-control">
                                               <option class="hidden"  selected disabled>Select user level 2</option>
+                                              <?php
+                                              require "../dbh.php";// connection to database
+                                              $sql="SELECT rolename FROM roles "; // Query to collect data
+
+                                              foreach ($conn->query($sql) as $row) {
+                                              echo "<option value=$row[rolename]>$row[rolename]</option>";
+                                              }
+                                              ?>
+
                                               </select>
                                         </div>
                                       </div>
@@ -67,12 +92,21 @@
                                         <div class="input-group">
                                             <select name="rolename3" id="rolename3" class="form-control">
                                               <option class="hidden"  selected disabled>Select user level 3</option>
+                                              <?php
+                                              require "../dbh.php";// connection to database
+                                              $sql="SELECT rolename FROM roles "; // Query to collect data
+
+                                              foreach ($conn->query($sql) as $row) {
+                                              echo "<option value=$row[rolename]>$row[rolename]</option>";
+                                              }
+                                              ?>
+
                                               </select>
                                         </div>
                                       </div>
 
 
-                                        <input type="submit" class="btnRegister" name="delete"  value="Change level"/>
+                                        <input type="submit" class="btnRegister" name="change"  value="Change level(s)"/>
                                     </div>
                                 </div>
                             </div>
@@ -82,7 +116,7 @@
 
                             <div class="tab-pane fade show" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                               <form action="changeOrDelUserDB.php" form class="form-style-9" method="POST">
-                            
+
 
                                 <h3  class="register-heading">Delete user</h3>
 
@@ -95,6 +129,14 @@
                                         <div class="input-group">
                                             <select name="user" id="user" class="form-control">
                                               <option class="hidden"  selected disabled>Select user to delete</option>
+                                              <?php
+                                              require "../dbh.php";// connection to database
+                                              $sql="SELECT username FROM user "; // Query to collect data
+
+                                              foreach ($conn->query($sql) as $row) {
+                                              echo "<option value=$row[username]>$row[username]</option>";
+                                              }
+                                              ?>
 
                                               </select>
                                         </div>
@@ -111,53 +153,3 @@
 
             </div>
 </form>
-            <?php
-            include('../dbh.php');
-            $sql = "SELECT username FROM user;";
-            $result = mysqli_query($conn,$sql);
-
-          //<select name="Color">
-
-
-
-
-            if (!$result) {
-                echo "DB Error, could not list tables\n";
-                echo 'MySQL Error: ' . mysqli_error();
-                exit;
-            }
-
-
-            while ($row = mysqli_fetch_row($result)) {
-                echo "<script>
-                var z = document.createElement('option');
-                z.setAttribute('value', '".$row[0]."');
-                var t = document.createTextNode('".$row[0]."');
-                z.appendChild(t);
-                document.getElementById('user').appendChild(z);</script>"; }  ?>
-
-
-
-                        <?php
-                        include('../dbh.php');
-                        $sql = "SELECT username FROM user;";
-                        $result = mysqli_query($conn,$sql);
-
-                      //<select name="Color">
-
-
-
-                        if (!$result) {
-                            echo "DB Error, could not list tables\n";
-                            echo 'MySQL Error: ' . mysqli_error();
-                            exit;
-                        }
-
-
-                        while ($row = mysqli_fetch_row($result)) {
-                            echo "<script>
-                            var z = document.createElement('option');
-                            z.setAttribute('value', '".$row[0]."');
-                            var t = document.createTextNode('".$row[0]."');
-                            z.appendChild(t);
-                            document.getElementById('users').appendChild(z);</script>"; }  ?>

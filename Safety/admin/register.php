@@ -45,6 +45,14 @@
                                           <div class="input-group">
 		                                          <select name="rolename" id="rolename" class="form-control">
                                                 <option class="hidden"  selected disabled>Select user level</option>
+                                                <?php
+                                                require "../dbh.php";// connection to database
+                                                $sql="SELECT rolename FROM roles "; // Query to collect data
+
+                                                foreach ($conn->query($sql) as $row) {
+                                                echo "<option value=$row[rolename]>$row[rolename]</option>";
+                                                }
+                                                ?>
 	                                              </select>
                                       		</div>
                                         </div>
@@ -54,7 +62,16 @@
 
                                             <select name="rolename2" id="rolename2" class="form-control">
                                                 <option class="hidden"  selected disabled>Select user level 2</option>
-                                              <option value="NULL">NULL</option>
+                                                  <option value="NULL">NULL</option>
+                                                <?php
+                                                require "../dbh.php";// connection to database
+                                                $sql="SELECT rolename FROM roles "; // Query to collect data
+
+                                                foreach ($conn->query($sql) as $row) {
+                                                echo "<option value=$row[rolename]>$row[rolename]</option>";
+                                                }
+                                                ?>
+
 
                                             </select>
                                           </div>
@@ -66,13 +83,21 @@
                                             <select name="rolename3" id="rolename3" class="form-control">
                                                 <option class="hidden"  selected disabled>Select user level 3</option>
                                                 <option value="NULL">NULL</option>
+                                                <?php
+                                                require "../dbh.php";// connection to database
+                                                $sql="SELECT rolename FROM roles "; // Query to collect data
+
+                                                foreach ($conn->query($sql) as $row) {
+                                                echo "<option value=$row[rolename]>$row[rolename]</option>";
+                                                }
+                                                ?>
                                             </select>
                                           </div>
                                         </div>
 
 
 
-                                        <input type="submit" class="btnRegister"  value="Register"/>
+                                        <input type="submit" class="btnRegister"   value="Register"/>
                                     </div>
                                 </div>
                             </div>
@@ -82,69 +107,3 @@
                 </div>
 
             </div>
-
-            <?php
-            include('../dbh.php');
-            $sql = "SELECT rolename FROM roles;";
-            $result = mysqli_query($conn,$sql);
-
-            if (!$result) {
-                echo "DB Error, could not list tables\n";
-                echo 'MySQL Error: ' . mysqli_error();
-                exit;
-            }
-
-            while ($row = mysqli_fetch_row($result)) {
-                echo "<script>
-                var z = document.createElement('option');
-                z.setAttribute('value', '".$row[0]."');
-                var t = document.createTextNode('".$row[0]."');
-                z.appendChild(t);
-                document.getElementById('rolename').appendChild(z);</script>";
-
-            } ?>
-
-
-            <?php
-            include('../dbh.php');
-            $sql = "SELECT rolename FROM roles WHERE rolename<>'Admin';";
-            $result = mysqli_query($conn,$sql);
-
-            if (!$result) {
-                echo "DB Error, could not list tables\n";
-                echo 'MySQL Error: ' . mysqli_error();
-                exit;
-            }
-
-            while ($row = mysqli_fetch_row($result)) {
-                echo "<script>
-                var z = document.createElement('option');
-                z.setAttribute('value', '".$row[0]."');
-                var t = document.createTextNode('".$row[0]."');
-                z.appendChild(t);
-                document.getElementById('rolename2').appendChild(z);</script>";
-
-            } ?>
-
-
-            <?php
-            include('../dbh.php');
-            $sql = "SELECT rolename FROM roles WHERE rolename<>'Admin';";
-            $result = mysqli_query($conn,$sql);
-
-            if (!$result) {
-                echo "DB Error, could not list tables\n";
-                echo 'MySQL Error: ' . mysqli_error();
-                exit;
-            }
-
-
-            while ($row = mysqli_fetch_row($result)) {
-                echo "<script>
-                var z = document.createElement('option');
-                z.setAttribute('value', '".$row[0]."');
-                var t = document.createTextNode('".$row[0]."');
-                z.appendChild(t);
-                document.getElementById('rolename3').appendChild(z);</script>";
-
-            } ?>

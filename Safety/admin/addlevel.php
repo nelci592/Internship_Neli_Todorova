@@ -9,6 +9,8 @@ $username = $_SESSION['username'];
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="addtask.css">
 
+<form action="addlevelDB.php" form class="form-style-9" method="POST">
+
 <div class="container register">
                 <div class="row">
                     <div class="col-md-3 register-left">
@@ -19,11 +21,11 @@ $username = $_SESSION['username'];
 
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                                <h3 class="register-heading">Add new level</h3>
+                                <h3 class="register-heading">Add new level / role</h3>
                                 <div class="row register-form">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Level name" value="" />
+                                            <input type="text" class="form-control" placeholder="Level / role name" name="rolename" value="" />
                                         </div>
 
 
@@ -31,7 +33,7 @@ $username = $_SESSION['username'];
                                     <div class="col-md-6">
                                         <div class="form-group">
                                           <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Level description" value="" />
+                                            <input type="text" class="form-control" placeholder="Level / role description"  name="role_desc" value="" />
 
                                           </div>
                                               </div>
@@ -51,3 +53,4 @@ $username = $_SESSION['username'];
                 </div>
 
             </div>
+</form>

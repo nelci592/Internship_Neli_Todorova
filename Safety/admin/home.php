@@ -8,6 +8,7 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Profile</title>
 
@@ -15,6 +16,8 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../signed.css">
+
+
 
 
 <div class="container">
@@ -62,27 +65,24 @@
 						</li>
 
 
+            <li>
+              <a href="operation.php" target="_self">
+              <i class="glyphicon glyphicon-ok"></i>
+              Add / Reassign operation </a>
+            </li>
+
 
 						<li>
-							<a href="addOrReassignTask.php" target="_blank">
+							<a href="addOrReassignTask.php" target="_self">
 							<i class="glyphicon glyphicon-ok"></i>
-							Add / Reassign task </a>
+							Add / Change task </a>
 						</li>
 
 
-
               <li>
-                <a href="addOrReassignFunction.php" target="_blank">
-                <i class="glyphicon glyphicon-ok"></i>
-                Add / Reassign function </a>
-              </li>
-
-
-
-              <li>
-  							<a href="addlevel.php" target="_blank">
+  							<a href="addlevel.php" target="_self">
   							<i class="glyphicon glyphicon-ok"></i>
-  							Add new level </a>
+  							Add new level / role </a>
   						</li>
 
 
@@ -100,7 +100,11 @@
 		</div>
 		<div class="col-md-9">
             <div class="profile-content">
-			   Some user related content goes here...
+			   Here the user will get a list with the tasks he/she has to do:
+        For example:
+            <p>-Draw a polygon</p>
+            <p>-Make cluster</p>
+            <p>-And so on</p>
             </div>
 		</div>
 	</div>

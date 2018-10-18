@@ -60,6 +60,7 @@
     font-weight: 600;
     width: 50%;
     cursor: pointer;
+    text-align: center;
 }
 .register .nav-tabs{
     margin-top: 3%;
@@ -93,4 +94,4 @@
     margin-bottom: -15%;
     color: #495057;
 }
-.buttonHolder{ text-align: center; }
+/* .buttonHolder{ text-align: center; } */

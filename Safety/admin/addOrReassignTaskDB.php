@@ -1,15 +1,33 @@
 <?php
 include '../dbh.php';
 session_start();
-$task_descr = $_POST['task_descr'];
-$rolename = $_POST['rolename'];
-$username = $_POST['username'];
+
+
+
+if (isset($_POST['changetask'])) {
+  $task = $_POST['task'];
+  $rolename = $_POST['rolename'];
+
+
+$sql = ("UPDATE tasks
+        Set rolename = '$rolename' WHERE task = '$task'");
+        $result = $conn->query($sql);
+        echo "something $sql";
+      //  header("Location: home.php");
+      }
+
 
 
 if (isset($_POST['addtask'])) {
-$sql = "INSERT INTO task_user (task_descr, rolename, username)
-VALUES ($task_descr', '$rolename', '$username')";
-echo "$sql";
-$result = $conn->query($sql);
-header("Location: home.php");
+  $task1 = $_POST['task1'];
+  $task = $_POST['task_description'];
+  //$task_description = $_POST['$task_description'];
+  $rolename3 = $_POST['rolename3'];
+
+  $sql = "INSERT INTO tasks (task, task_description, rolename)
+          VALUES ('$task1', 'task', '$rolename3')";
+          $result = $conn->query($sql);
+          echo "$sql";
+          //header('location: home.php');
+
 }
